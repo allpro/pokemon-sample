@@ -17,7 +17,8 @@
     <script type="text/javascript">
 			(function({ pathname, search }) {
 				if (!search) return;
-				window.history.replaceState(null, null, `${pathname}/${search.slice(1)}`);
+				const path = `${pathname}/${search.slice(1)}`.replace(/\/\//, '/');
+				window.history.replaceState(null, null, path);
 			})(window.location);
     </script>
 
