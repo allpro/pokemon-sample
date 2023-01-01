@@ -15,9 +15,10 @@
 
     <!-- Hack to handle page refreshes on github-pages. See related script in 404.html -->
     <script type="text/javascript">
-			(function({ pathname, search }) {
-				if (!search) return;
-				window.history.replaceState(null, null, `${pathname}${search.slice(1)}`);
+			(function({ pathname, hash }) {
+				if (!hash) return;
+				const url = [pathname.replace(/\/$/, ''), hash.slice(1)].join('/');
+				window.history.replaceState(null, '', url);
 			})(window.location);
     </script>
 

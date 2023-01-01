@@ -10,7 +10,8 @@
       const segments = pathname.slice(1).split('/');
       // Navigate to URL with the child-path now a search param
       // The original path will be restored by code inside index.html
-      window.location.replace(`${origin}/${segments[0]}?${segments.slice(1)}`);
+      // window.location.replace(`${origin}/${segments[0]}?${segments.slice(1)}`);
+      window.location.replace(`${origin}/${segments[0]}#${segments.slice(1)}`);
     </script>
   </head>
   <body>
