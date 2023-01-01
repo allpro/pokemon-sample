@@ -6,12 +6,12 @@ import 'styles/normalize.css';
 
 import sitemap from './sitemap';
 
-const router = createBrowserRouter(sitemap);
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
 // Dynamic basename so sitemap works when hosted at github-pages URL
 const basename = document.querySelector('base')?.getAttribute('href') ?? '/';
 
+const router = createBrowserRouter(sitemap, { basename });
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <RouterProvider basename={basename} router={router} />
+  <RouterProvider router={router} />
 );
