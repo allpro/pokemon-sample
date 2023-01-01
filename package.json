@@ -2,6 +2,7 @@
   "name": "pokemon-sample",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://allpro.github.io/pokemon-sample",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,6 +15,9 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   },
   "scripts": {
     "predeploy" : "npm run build",
@@ -40,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
