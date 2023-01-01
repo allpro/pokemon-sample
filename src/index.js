@@ -9,6 +9,9 @@ import sitemap from './sitemap';
 const router = createBrowserRouter(sitemap);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Dynamic basename so sitemap works when hosted at github-pages URL
+const basename = document.querySelector('base')?.getAttribute('href') ?? '/';
+
 root.render(
-  <RouterProvider router={router} />
+  <RouterProvider basename={basename} router={router} />
 );
