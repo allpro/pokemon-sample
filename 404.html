@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Page Not Found Hack</title>
+
+    <!-- Hack to handle page refreshes on github-pages. See related script in 404.html -->
+    <script type="text/javascript">
+      const { origin, pathname } = window.location;
+      const segments = pathname.split('/');
+      // Navigate to URL with the child-path now a search param
+      // The original path will be restored by code inside index.html
+      window.location.replace(`${origin}/${segments[0]}?${segments.slice(1)}`);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
