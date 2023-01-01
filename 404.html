@@ -7,7 +7,7 @@
     <!-- Hack to handle page refreshes on github-pages. See related script in 404.html -->
     <script type="text/javascript">
       const { origin, pathname } = window.location;
-      const segments = pathname.split('/');
+      const segments = pathname.slice(1).split('/');
       // Navigate to URL with the child-path now a search param
       // The original path will be restored by code inside index.html
       window.location.replace(`${origin}/${segments[0]}?${segments.slice(1)}`);
