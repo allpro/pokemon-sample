@@ -32,10 +32,6 @@ jobs:
         npm run build
 
     - name: Deploy️ 🚀
-      run: |
-        git config --global user.email "development@allpro.net"
-        git config --global user.name "Kevin Dalman"
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: build
