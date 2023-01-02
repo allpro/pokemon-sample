@@ -2,7 +2,7 @@
   "name": "pokemon-sample",
   "version": "0.1.0",
   "private": false,
-  "homepage": "",
+  "homepage": "https://allpro.github.io/pokemon-sample",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -23,7 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "PORT=4000 react-scripts start",
-    "build": "export PUBLIC_URL=https://allpro.github.io/pokemon-sample && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
