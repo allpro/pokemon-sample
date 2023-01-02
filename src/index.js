@@ -14,7 +14,7 @@ import sitemap from './sitemap';
 const basename = document.querySelector('base')?.getAttribute('href') ?? '/';
 
 // When published in a sub-folder, use a hash-router so pages can refresh correctly
-const createRouter = basename === '/' ? createBrowserRouter : createHashRouter;
+const createRouter = basename.length < 2 ? createBrowserRouter : createHashRouter;
 
 const router = createRouter(sitemap, { basename });
 

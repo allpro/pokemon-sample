@@ -18,7 +18,7 @@ import model from './detailsModel';
  * @param {boolean} [config.loadOnMount]  If true, details data will be loaded onMount
  * @returns {Object}
  */
-function usePokemonDetails({ name, loadOnMount = false }) {
+function useDetails({ name, loadOnMount = false }) {
 	/**
 	 * Store the details item in state so can force consuming component to rerender when it loads
 	 */
@@ -51,4 +51,4 @@ function usePokemonDetails({ name, loadOnMount = false }) {
 	};
 }
 
-export default usePokemonDetails;
+export default useDetails;

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { createUseStyles } from 'react-jss';
 import cx from 'classnames';
 
-import { usePokemonDetails } from 'data';
+import { useDetails } from 'data';
 import { getSprite, showSpriteFront, showSpriteBack } from 'helpers';
 import { theme } from 'styles'
 
@@ -24,7 +24,7 @@ function ListItem({ name }) {
 	 * If details not loaded then the list-item is provided so can display the Pokémon name.
 	 * This component will rerender when the details finish loading.
 	 */
-	const { item, isDetailsLoaded } = usePokemonDetails({ name, loadOnMount: false });
+	const { item, isDetailsLoaded } = useDetails({ name, loadOnMount: false });
 
 	return (
 		<NavLink

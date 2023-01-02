@@ -50,7 +50,7 @@ function Model() {
 	/**
 	 * Listeners are used so that only the specific elements that need refreshing will rerender,
 	 *  like the cards in the list view.
-	 * @see usePokemonDetails()
+	 * @see useDetails()
 	 */
 	const listListeners = [];
 

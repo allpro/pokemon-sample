@@ -51,7 +51,7 @@ function Model() {
 	/**
 	 * Listeners allow only the specific elements that need refreshing to rerender,
 	 *  like the cards in the list view or the footer/progress-bar.
-	 * @see usePokemonDetails()
+	 * @see useDetails()
 	 */
 	const itemListeners = {}; // Fired when the specific item is loaded/updated
 	const itemsProgressListeners = []; // Fired when any item is loaded/updated
@@ -200,7 +200,7 @@ function Model() {
 
 	/**
 	 * Add a listener that will be called when the specified details are loaded.
-	 * This is used by the usePokemonDetails helper, and potentially other code,
+	 * This is used by the useDetails helper, and potentially other code,
 	 *  so multiple handlers for the same item can be handled.
 	 *
 	 * @param {string} name

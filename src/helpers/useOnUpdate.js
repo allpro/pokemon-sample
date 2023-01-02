@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import isFunction from 'lodash/isFunction';
 
 
-
 /**
  * Wrapper to simplify onUpdate effects that should NOT run onMount.
  * An onUpdate method return value that IS a function is returned
@@ -16,11 +15,10 @@ import isFunction from 'lodash/isFunction';
  * @returns undefined
  */
 function useOnUpdate(handler, dependencies) {
-	// NOTE: We must create an internal isMounted flag to ensure we skip first render
 	const isMounted = useRef(false);
 
 	useEffect(() => {
-		// Hook does not run onMount so exit if first time called
+		// onUpdate does not run onMount so exit if this is the first call
 		if (!isMounted.current) {
 			isMounted.current = true;
 			return undefined;
@@ -28,7 +26,7 @@ function useOnUpdate(handler, dependencies) {
 
 		const response = handler();
 
-		// Return the response IF it's a function because can return an onUnmount method
+		// Return the response IF it's a function because can return an un-update method
 		// We ignore any non-function values, like a promise, to allow passing methods with a wrapper.
 		return isFunction(response) ? response : undefined;
 	}, dependencies); // eslint-disable-line

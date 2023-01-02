@@ -36,19 +36,22 @@ const useStyles = createUseStyles({
 			fontWeight: 600,
 			color: 'white',
 			cursor: 'pointer',
+			opacity: 1,
 
 			'&.active': {
+				opacity: '1 !important', // Override :hover
 				borderColor: 'blue',
 			},
 			'&.inactive': {
-				opacity: 0.5,
-				'&:hover': {
-					opacity: 1,
-				},
+				opacity: 0.5, // Allow hover-opacity
 			},
 			'&.disabled': {
-				opacity: 0.5,
+				opacity: '0.5 !important', // Override :hover
 				cursor: 'wait',
+			},
+
+			'&:hover': {
+				opacity: 0.8,
 			},
 		},
 	},

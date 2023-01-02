@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import startCase from 'lodash/startCase';
 
-import { usePokemonDetails } from 'data';
+import { useDetails } from 'data';
 import { getSprite } from 'helpers';
 import { theme } from 'styles'
 import 'styles/progressbar.css';
@@ -21,7 +21,7 @@ function Details({ name }) {
 	 * If details is not loaded then the list-item is provided so can display the Pokémon name.
 	 * This component will rerender when the details finish loading, if not already.
 	 */
-	const { item, isDetailsLoaded } = usePokemonDetails({ name, loadOnMount: true });
+	const { item, isDetailsLoaded } = useDetails({ name, loadOnMount: true });
 
   return (
     <section className={classes.wrapper}>
