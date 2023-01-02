@@ -28,7 +28,6 @@ jobs:
     - name: Build 🏗️
       run: |
         npm ci
-        export PUBLIC_URL=https://allpro.github.io/pokemon-sample
         npm run build
 
     - name: Deploy️ 🚀
