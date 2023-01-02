@@ -1,5 +1,3 @@
-import { theme } from 'styles'
-
 const styles = {
 	wrapper: {
 		flex: '0 1 100%',
