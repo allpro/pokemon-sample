@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
 import Filterbar from 'components/Filterbar';
@@ -12,19 +12,14 @@ const useStyles = createUseStyles(styles);
 
 function AppLayout() {
 	const classes = useStyles();
+
+	/*
 	const navigate = useNavigate();
 	const { hash } = window.location;
 
-	console.log('AppLayout', {
-		hash,
-		pathname: window.location.pathname,
-		search: window.location.search,
-	});
-
-	/**
 	 * Hack to handle page refreshes on github-pages.
 	 * @see related script in 404.html
-	 */
+	 *
 	useEffect(() => {
 		if (!hash) return;
 		const path = [window.location.pathname.replace(/\/$/, ''), hash.slice(1)].join('/');
@@ -32,6 +27,7 @@ function AppLayout() {
 	}, [hash, navigate]);
 
 	if (hash) return null;
+*/
 
 	return (
     <div className={classes.wrapper}>
