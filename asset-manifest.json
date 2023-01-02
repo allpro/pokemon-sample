@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/pokemon-sample/static/css/main.c1e1bda8.css",
-    "main.js": "/pokemon-sample/static/js/main.f5f98a90.js",
-    "index.html": "/pokemon-sample/index.html",
-    "main.c1e1bda8.css.map": "/pokemon-sample/static/css/main.c1e1bda8.css.map",
-    "main.f5f98a90.js.map": "/pokemon-sample/static/js/main.f5f98a90.js.map"
+    "main.css": "https://allpro.github.io/pokemon-sample/static/css/main.c1e1bda8.css",
+    "main.js": "https://allpro.github.io/pokemon-sample/static/js/main.f5f98a90.js",
+    "index.html": "https://allpro.github.io/pokemon-sample/index.html",
+    "main.c1e1bda8.css.map": "https://allpro.github.io/pokemon-sample/static/css/main.c1e1bda8.css.map",
+    "main.f5f98a90.js.map": "https://allpro.github.io/pokemon-sample/static/js/main.f5f98a90.js.map"
   },
   "entrypoints": [
     "static/css/main.c1e1bda8.css",
