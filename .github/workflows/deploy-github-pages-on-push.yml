@@ -35,4 +35,7 @@ jobs:
       run: |
         git config --global user.email "development@allpro.net"
         git config --global user.name "Kevin Dalman"
+        git config --global remote.origin.url "https://github.com/allpro/pokemon-sample.git"
         npx gh-pages -d build
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
