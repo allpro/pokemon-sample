@@ -32,4 +32,7 @@ jobs:
         npm run build
 
     - name: Deploy ️ 🚀
-      run:  npx gh-pages -d build
+      run: |
+        git config --global user.email "development@allpro.net"
+        git config --global user.name "Kevin Dalman"
+        npx gh-pages -d build
