@@ -146,6 +146,10 @@ function FilterbarTypeList({ onSelect }) {
 					className={getTypeClasses(type)}
 					style={{ backgroundColor: theme.types[type] }}
 					onClick={onClickType}
+					title={isAllItemsLoaded
+						? 'Click to select/unselect a type to show\nUse CTRL+Click to multi-select'
+						: 'Please wait while data is loading...'
+					}
 				>
 					{type}
 				</li>

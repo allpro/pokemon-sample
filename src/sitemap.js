@@ -12,7 +12,7 @@ const sitemap = [
 				element: <Details />,
 			},
 		],
-	}
+	},
 ];
 
 export default sitemap;
