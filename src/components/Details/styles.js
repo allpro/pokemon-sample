@@ -7,6 +7,7 @@ const styles = {
 		background: theme.extraLightBackground,
 		borderLeft: theme.lightBorder,
 		overflowY: 'auto',
+		position: 'relative',
 
 		// Section headings
 		'& h2': {
@@ -15,6 +16,28 @@ const styles = {
 			textTransform: 'uppercase',
 			padding: 0,
 			margin: '20px 0 7px',
+		},
+	},
+
+	closeIcon: {
+		background: theme.mediumBackground,
+		border: theme.mediumBorder,
+		borderRadius: '50%',
+		fontSize: '16px',
+		textAlign: 'center',
+		lineHeight: '30px',
+		width: '30px',
+		height: '30px',
+		position: 'absolute',
+		top: '5px',
+		right: '5px',
+		zIndex: 1,
+		cursor: 'pointer',
+
+		'&:hover': {
+			background: '#F6F6FF',
+			borderColor: '#00C',
+			color: '#00C',
 		},
 	},
 

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 import startCase from 'lodash/startCase';
 
@@ -15,6 +16,7 @@ const useStyles = createUseStyles(styles);
 
 function Details({ name }) {
 	const classes = useStyles();
+	const navigate = useNavigate();
 
 	/**
 	 * Hook will load the Pokémon details onMount if not already loaded.
@@ -25,6 +27,13 @@ function Details({ name }) {
 
   return (
     <section className={classes.wrapper}>
+			<nav
+				className={classes.closeIcon}
+				onClick={() => navigate('/')}
+			>
+				X
+			</nav>
+
 			<div className={classes.imageWrapper}>
 				{isDetailsLoaded && (
 					<img

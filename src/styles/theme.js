@@ -3,6 +3,7 @@ const theme = {
 	lightBackground: '#FAFAFA',
 	extraLightBackground: '#FDFDFD',
 	lightBorder: '1px solid #E9E9E9',
+	mediumBorder: '1px solid #DDD',
 
 	types: {
 		Bug: '#91ba2e',
